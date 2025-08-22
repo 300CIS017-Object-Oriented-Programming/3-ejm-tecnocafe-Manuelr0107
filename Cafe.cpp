@@ -13,6 +13,7 @@ void mostrarCartaProductos()
     cout << "2. Cappuccino  $" << PRECIO_CAPPUCCINO << "\n";
     cout << "3. Pandebono   $" << PRECIO_PANDEBONO << "\n";
     cout << "4. Sandwich    $" << PRECIO_SANDWICH << "\n";
+    cout << "5. Chocolate   $" <<PRECIO_CHOCOLATE << "\n";
 }
 
 int leerCodigoProducto()
@@ -20,7 +21,7 @@ int leerCodigoProducto()
     cout << "Ingrese el codigo del producto (1-4): ";
     int codigo;
     cin >> codigo;
-    while (codigo < 1 || codigo > 4)
+    while (codigo < 1 || codigo > 5)
     {
         cout << "Codigo inválido. Intente de nuevo (1-4): ";
         cin.clear();
@@ -65,6 +66,10 @@ int obtenerPrecioPorCodigo(int codigoProducto)
         {
             return PRECIO_SANDWICH;
         }
+    case 5:
+        {
+            return PRECIO_CHOCOLATE;
+        }
     default:
         {
             return 0;
@@ -91,6 +96,10 @@ string obtenerNombreProducto(int codigoProducto)
     case 4:
         {
             return "Sándwich";
+        }
+    case 5:
+        {
+            return "Chocolate";
         }
     default:
         {
@@ -205,10 +214,14 @@ void prediligenciarProductosDemo(int codigos[], int cantidades[], int & cantidad
     codigos[2] = 4;  // Sandwich
     cantidades[2] = 1;
 
+    codigos[3] = 2; // chocolate
+    cantidades[3] = 2;
+
     cantidadItemsRegistrados = 3;
 
     cout << "\nSe han cargado productos de ejemplo en el pedido:\n";
     cout << "- 2 Tintos\n";
     cout << "- 3 Pandebonos\n";
     cout << "- 1 Sándwich\n\n";
+    cout <<"- 2 Chocolates\n";
 }

@@ -34,6 +34,11 @@ const int PRECIO_PANDEBONO = 3000;
  */
 const int PRECIO_SANDWICH = 8500;
 
+/**
+ * @brief Precio del producto Sándwich.
+ */
+const int PRECIO_CHOCOLATE = 6000;
+
 // --- Descuentos (% expresado de 0.0 a 1.0) ---
 /**
  * @brief Descuento aplicado a estudiantes (10%).
